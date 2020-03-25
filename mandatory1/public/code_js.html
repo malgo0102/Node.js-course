@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>JS - Node.js documentation</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Node.js documentation</a></h1>
+        <h2>Code: javascript</h2>
+    </header>
+
+    <section>
+<!-- Nav -->
+    <div id="nav">
+        <script>
+            console.log("yello");
+            $(document).ready(()=> {
+                $("#nav").load("nav.html", function() {
+                    // when load is done:
+                    $("#nav1, #nav22, #nav23, #nav24, #nav3, #nav4").hide();
+                });
+            });
+        </script>
+    </div>
+
+<!-- Article -->
+
+        <article>
+            <p>Code snippets come from excercies in class with Anders at KEA </p>
+            <h3 id="1">Basics</h3>
+            <div>
+                <figure>
+                    <figcaption id="1.1">Console and variables</figcaption>
+                    <pre>
+                        <code>
+    var firstName = "Malgorzata";
+    var lastName = "Witkowska";
+
+    console.log("My first name is", firstName, "my last name is", lastName);
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="1.2">Numbers and Strings</figcaption>
+                    <pre>
+                        <code>
+    var year = "2017";
+    var number = 1;
+
+    // var newYear = parseInt(year) + number;
+    // var newYear = Number(year) + number;
+
+    var newYear = +(year) + 1;
+
+    console.log(newYear);
+
+    var something = "123abc1";
+
+    console.log(parseInt(something));
+    console.log(Number(something));
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+            <div>
+                <h3 id="2">Strings</h3>
+                <figure>
+                    <figcaption id ="2.1">Add numbers from string to float</figcaption>
+                    <pre>
+                        <code>
+    var numberOne = "1.10";
+    var numberTwo = "2.30";
+
+    console.log(parseFloat(numberOne) + parseFloat(numberTwo));
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="2.2">Add the numbers and the total with 2 decimals</figcaption>
+                    <pre>
+                        <code>
+    var numberOne = "1.10";
+    var numberTwo = "2.30";
+
+    var result = parseFloat(numberOne) + parseFloat(numberTwo);
+
+    console.log(result.toFixed(2));
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="2.3">Decimals and average</figcaption>
+                    <pre>
+                        <code>
+    var one = 10;
+    var two = 45;
+    var three = 98;
+
+    // Show in the console the avg. with 5 decimals
+
+    var total = (one + two + three) / 3;
+
+    console.log(total.toFixed(5));
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="2.4">Get the character by index</figcaption>
+                    <pre>
+                        <code>
+    var letters = "abc";
+    // Get me the character "c"
+
+    console.log(letters[2]);
+
+    console.log(letters.charAt(2));                            
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="2.5">Replace</figcaption>
+                    <pre>
+                        <code>
+    var fact = "You are learning javascript!";
+
+    // capitalize the J in Javascript
+
+    console.log(fact.replace("j", "J"));                            
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+            <div>
+                <h3 id="3">Objects</h3>
+                <figure>
+                    <figcaption id="3.1">Retrieve value from object by key</figcaption>
+                    <pre>
+                        <code>
+    var myObj = {"message": "Hello, earthling! I bring peace."};
+
+    // Log the message 
+
+    // dot notation
+    console.log(myObj.message);
+
+    // bracket notation / square notation
+    console.log(myObj["message"]);
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="3.2">Defining an object</figcaption>
+                    <pre>
+                        <code>
+    In me.json file:
+    {
+        "name": "Joachim",
+        "age": 123,
+        "parents": [{"name": "name1"}, {"name": "name2"}]
+    }
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="3.3">Add a property</figcaption>
+                    <pre>
+                        <code>
+    var stackOverflow = {};
+
+    // make a rule called isAllowed and let the value be true
+
+    stackOverflow.isAllowed = true;
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="3.4">Remove a property</figcaption>
+                    <pre>
+                        <code>
+    var thisSong = {"description": "The best song in the world."}
+
+    // remove the property "description" and add a property called "about" that should say "Just a tribute." 
+
+    delete thisSong.description;
+
+    // thisSong['about'] = "Just a tribute";
+
+    thisSong.about = "Just a tribute";
+
+    console.log(thisSong);  
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+            <div>
+                <h3 id="4">Array loops</h3>
+                <figure>
+                    <figcaption id="4.1">Array positioning</figcaption>
+                    <pre>
+                        <code>
+    var letters = ["a","b","c"];
+    // show b in the console 
+
+    console.log(letters[1]);
+
+    // --------------------------------------
+    // Exercise 2 - Array Positioning
+
+    var friends = [];
+
+    // What a lonely array. Add at least 3 friend objects to it.  
+
+    friends.push({"name": "wajid"});
+
+    var joachim = {"name": "Joachim"};
+
+    friends.push(joachim);  
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="4.2">Get the index of first occurance of that value</figcaption>
+                    <pre>
+                        <code>
+    var significantMathNumbers = [0, 2.718, 3.14159, 1729]
+
+    // You want to programmatically find where the number 1729 is in the array.
+    // programmatically means that no finger counting allowed. There is a method for this (finding index based of value). 
+
+    console.log(significantMathNumbers.indexOf(1729));        
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="4.3">Inserting elements</figcaption>
+                    <pre>
+                        <code>
+    var diet = ["tomato", "cucumber", "rocolla", "kale"]
+
+    // You are a programmer. In one line (one statement) insert hamburger, soda and pizza between the elements rocolla and kale
+
+    diet.splice(3, 0, "hamburger", "soda", "pizza");
+
+    console.log(diet);
+
+    console.log("a string".length);   
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="4.4">Remove element</figcaption>
+                    <pre>
+                        <code>
+    // You don't like kale at all. Remove the LAST element of the array.
+    // Don't remove by index. You know in advance that it's the last in the array because you are too full already. 
+
+    diet.pop();
+
+    console.log(diet);
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="4.5">Copy array</figcaption>
+                    <pre>
+                        <code>
+    // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
+
+    // var dinnerTray = diet.slice();
+
+                    // spread operator
+    var dinnerTray = [...diet];
+
+    console.log("new dinner tray ", dinnerTray);   
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="4.6">For loop</figcaption>
+                    <pre>
+                        <code>
+    var letters = ["a","b","c", "d", "e", "f", "g", "h"];
+
+    // log every second char in the array starting from b
+
+    for (var i = 1; i < letters.length; i += 2) {
+        console.log(letters[i]);
+    } 
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="4.7">For loop and if statement</figcaption>
+                    <pre>
+                        <code>   
+    var numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
+
+    var discardedNumbers = [];
+
+    // log the element if the number is above 6 or below 0
+    // else push them to the array discardedNumbers
+
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers < 0 || numbers[i] > 6) {
+            console.log(numbers[i]);
+        } else {
+            discardedNumbers.push(numbers[i]);
+        }
+    }
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </article>
+    </section>
+
+    <div id="footer">
+        <script>
+            $(document).ready(()=> {
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </div>
+</body>
+</html>

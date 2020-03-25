@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>API - Node.js documentation</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Node.js documentation</a></h1>
+        <h2>Code: first API</h2>
+    </header>
+
+    <section>
+<!-- Nav -->
+    <div id="nav">
+        <script>
+            console.log("yello");
+            $(document).ready(()=> {
+                $("#nav").load("nav.html", function() {
+                    // when load is done:
+                    $("#nav1, #nav21, #nav23, #nav24, #nav3, #nav4").hide();
+                });
+            });
+        </script>
+    </div>
+
+<!-- Article -->
+
+        <article>
+            <p>For dependencies go to <a href="/commands">commands</a></p>
+            <h3 id="1">app.js file</h3>
+            <div>
+                <figure>
+                    <figcaption id="1.1">Always check if the app is working in the console at all times and stages</figcaption>
+                    <pre>
+                        <code>
+    console.log(1+1); 
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="1.2">Express setup</figcaption>
+                    <pre>
+                        <code>
+    
+    const express = require ("express");
+    const app = express();
+    const request = require("request");
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="1.3">Server setup</figcaption>
+                    <pre>
+                        <code>
+    const server = app.listen(3000, error => {
+        if (error){
+            console.log("Error running the server");
+        }
+        console.log("Server is running on port " + server.address().port);
+    });
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="1.4">Static files in Express setup</figcaption>
+                    <pre>
+                        <code>
+    app.use(express.static('public'));
+                        </code>
+                    </pre>
+                </figure>
+                <figure>
+                    <figcaption id="1.5">Get route & serving Files in Express with sendFile()</figcaption>
+                    <pre>
+                        <code>
+    app.get("/", (req, res)=>{
+        return res.sendFile(__dirname + "/public/index.html");
+    });
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </article>
+    </section>
+    <div id="footer">
+        <script>
+            $(document).ready(()=> {
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Node.js tools</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Node.js documentation</a></h1>
+        <h2>Tools</h2>
+    </header>
+
+    <section>
+        <div id="nav">
+            <script>
+                console.log("yello");
+                $(document).ready(()=> {
+                    $("#nav").load("nav.html", function() {
+                        // when load is done:
+                        $("#nav1, #nav2, #nav3").hide();
+                    });
+                });
+            </script>
+        </div>
+
+        <article>
+            <div id=1>
+                <h2>
+                    Postman
+                </h2>
+                <p>
+                    Postman is used for developing and testing an API. By creating get/post/put/delete etc. requests and giving a response Postman allows to check if the elements are correct.
+                </p>
+            </div>
+            <div id=2>
+                <h2>
+                    Nodemon
+                </h2>
+                <p>
+                    Nodemon is a npm tool. It's main function is providing a live server, so the changes made in the web application are visible immediately.
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <div id="footer">
+        <script>
+            $(document).ready(()=> {
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </div>
+</body>
+</html>

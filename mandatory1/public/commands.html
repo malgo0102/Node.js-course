@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Node.js commands</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Node.js documentation</a></h1>
+        <h2>Commands</h2>
+    </header>
+
+    <section>
+        <div id="nav">
+            <script>
+                console.log("yello");
+                $(document).ready(()=> {
+                    $("#nav").load("nav.html", function() {
+                        // when load is done:
+                        $("#nav1, #nav2, #nav4").hide();
+                    });
+                });
+            </script>
+        </div>
+
+        <article>
+            <figure>
+                <figcaption id="1">Basics</figcaption>
+                <pre>
+                    <code>
+    // Make directory
+    $ mkdir myapp
+
+    //Create two folders in tree structure
+    $ mkdir myapp\public
+
+    // Change directory
+    $ cd..
+
+    // Go two folders up
+    $ cd..\..
+
+    // Go to the top of directory tree
+    $ cd\
+
+    //Rename file
+    $ ren myapp.js mysuperapp.js
+
+    //Delete file
+    $ del myapp.js
+
+    //In case of panic
+    help
+                    </code>
+                </pre>
+            </figure>
+            <figure>
+                <figcaption id="2">Run the application</figcaption>
+                <pre>
+                    <code>
+    $ node myapp.js
+                    </code>
+                </pre>
+            </figure>
+            <figure>
+                <figcaption id="3">Install dependencies</figcaption>
+                <pre>
+                    <code>
+    $ $ npm install
+                    </code>
+                </pre>
+            </figure>
+            <figure>
+                <figcaption id="4">Express: global or save the dependencies in the app</figcaption>
+                <pre>
+                    <code>
+    $ npm install -g express
+    $ npm install express --save
+                    </code>
+                </pre>
+            </figure>
+            <figure>
+                <figcaption id="5">Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default
+                    <p><a href="https://www.npmjs.com/package/request">request - npm</a></p>
+                </figcaption>
+                <pre>
+                    <code>
+    $ npm i request  
+                    </code>
+                </pre>
+            </figure>
+            <figure>
+                <figcaption id="6">Run scripts that set and use environment variables across platforms
+                    <p><a href="https://www.npmjs.com/package/cross-env">cross-env - npm</a></p>
+                </figcaption>
+                <pre>
+                    <code>
+    //This module is distributed via npm which is bundled with node and should be installed as one of your project's devDependencies 
+
+    $ npm install --save-dev cross-env
+                    </code>
+                </pre>
+            </figure>
+        </article>
+    </section>
+
+    <div id="footer">
+        <script>
+            $(document).ready(()=> {
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </div>
+</body>
+</html>

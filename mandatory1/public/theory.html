@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Node.js theory</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Node.js documentation</a></h1>
+        <h2>Theory</h2>
+    </header>
+
+    <section>
+        <div id="nav">
+            <script>
+                console.log("yello");
+                $(document).ready(()=> {
+                    $("#nav").load("nav.html", function() {
+                        // when load is done:
+                        $("#nav2, #nav3, #nav4").hide();
+                    });
+                });
+            </script>
+        </div>
+
+        <article>
+            <div id=1>
+                <h2>
+                    Node.js
+                </h2>
+                <p>
+                    Node.js is a web server framework using JavaScript. It allows dynamic content, CRUD operations on files and data and/or collecting data from forms. Its advantage is that it is asynchronous and runs concurrently: it uses a single thread in the app, that gives work to background multiple threads.
+                    <br><br>
+                    In Node.js the task is sent from client to node.js server. The Node.js server lets the file system deal with processing the file. Meanwhile Node.js server is ready to take another request. Finally, after the file was read by the file system it is returned by Node.js from file system to client.
+                </p>
+                <p>
+                    <a href="https://nodejs.org/en/about/">https://nodejs.org/en/about/</a><br>
+                    <a href="https://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/">https://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/</a><br>
+                    <a href="https://www.w3schools.com/nodejs/nodejs_intro.asp">https://www.w3schools.com/nodejs/nodejs_intro.asp</a><br>
+                    <a href="https://medium.com/@sararavi14/node-js-threading-model-badf7bb5fffa">https://medium.com/@sararavi14/node-js-threading-model-badf7bb5fffa</a>
+                </p>
+            </div>
+            <div id=2>
+                <h2>
+                    Express
+                </h2>
+                <p>
+                    Express is a framework that supports node.js. It handles routing and is serving static files.
+                </p>
+                <p>
+                    <a href="https://expressjs.com/">https://expressjs.com/</a>  
+                </p>
+            </div>
+            <div id=3>
+                <h2>
+                    npm
+                </h2>
+                <p>
+                    npm is a registry of JavaScript libraries  
+                </p>
+                <p>
+                    <a href="https://docs.npmjs.com/about-npm/">https://docs.npmjs.com/about-npm/</a>
+                </p>
+            </div>
+            <div id=4>
+                <h2>
+                    jQuery
+                </h2>
+                <p>
+                    jQuery is a JavaScript library which allows to make changes in the DOM easily. It deals with event handling, manipulation, animation etc.
+                </p>
+                <p>
+                    <a href="https://jquery.com/">https://jquery.com/</a>
+                </p>
+            </div>
+            <div id=5>
+                <h2>
+                    DOM
+                </h2>
+                <p>
+                    Document Object Model (DOM) is a logical tree structure of objects based on html elements. It’s created by web browser after the web page is loaded.
+                </p>
+                <p>
+                    <a href="https://www.w3schools.com/js/js_htmldom.asp">https://www.w3schools.com/js/js_htmldom.asp</a>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <div id="footer">
+        <script>
+            $(document).ready(()=> {
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </div>
+</body>
+</html>
